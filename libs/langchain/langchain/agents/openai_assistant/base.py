@@ -91,7 +91,7 @@ def _is_assistants_builtin_tool(
     tool: Union[Dict[str, Any], Type[BaseModel], Callable, BaseTool],
 ) -> bool:
     """Determine if tool corresponds to OpenAI Assistants built-in."""
-    assistants_builtin_tools = ("code_interpreter", "retrieval")
+    assistants_builtin_tools = ("code_interpreter", "retrieval", "file_search")
     return (
         isinstance(tool, dict)
         and ("type" in tool)
